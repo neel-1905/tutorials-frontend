@@ -9,13 +9,16 @@ const ListTutorials = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch("http://localhost:3001/courses/all", {
-          method: "GET",
-          headers: {
-            token: localStorage.getItem("token"),
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await fetch(
+          "https://tutorials-backend-kappa.vercel.app/courses/all",
+          {
+            method: "GET",
+            headers: {
+              token: localStorage.getItem("token"),
+              "Content-Type": "application/json",
+            },
+          }
+        );
         const coursesData = await res.json();
         setTutorials(coursesData.courseExists);
       } catch (err) {
@@ -27,7 +30,7 @@ const ListTutorials = () => {
   const handleDelete = async (id) => {
     try {
       const res = await fetch(
-        `http://localhost:3001/courses/deleteCourse/${id}`,
+        `https://tutorials-backend-kappa.vercel.app/courses/deleteCourse/${id}`,
         {
           method: "DELETE",
           headers: {

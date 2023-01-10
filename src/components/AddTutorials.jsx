@@ -17,7 +17,7 @@ const AddTutorials = () => {
   const handleAddTutorial = async () => {
     try {
       const savedCourse = await fetch(
-        "http://localhost:3001/courses/addCourse",
+        "https://tutorials-backend-kappa.vercel.app/courses/addCourse",
         {
           method: "POST",
           headers: {
