@@ -17,7 +17,7 @@ const EditTutorial = () => {
     (async () => {
       try {
         const res = await fetch(
-          `http://localhost:3001/courses/getOne/${param?.id}`,
+          `https://tutorials-backend-kappa.vercel.app/courses/getOne/${param?.id}`,
           {
             method: "GET",
             headers: {
@@ -46,7 +46,7 @@ const EditTutorial = () => {
   const handlEditTutorial = async () => {
     try {
       const savedCourse = await fetch(
-        `http://localhost:3001/courses/editCourse/${param?.id}`,
+        `https://tutorials-backend-kappa.vercel.app/courses/editCourse/${param?.id}`,
         {
           method: "PUT",
           headers: {
