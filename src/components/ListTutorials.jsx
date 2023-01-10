@@ -16,10 +16,10 @@ const ListTutorials = () => {
             "Content-Type": "application/json",
           },
         });
-        const tutorialsData = await res.json();
-        setTutorials(tutorialsData?.courseExists);
+        const coursesData = await res.json();
+        setTutorials(coursesData.courseExists);
       } catch (err) {
-        throw new Error(`Error occured ${err}`);
+        alert(err);
       }
     })();
   }, []);
@@ -46,6 +46,8 @@ const ListTutorials = () => {
       alert(err);
     }
   };
+
+  console.log(tutorials);
 
   return (
     <PrivateRoute>

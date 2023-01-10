@@ -4,12 +4,14 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
+
+  height: 100%;
   background-color: #0251b0;
 }
 
 .card {
   font-family: "Kanit", sans-serif;
+  max-height: 400px;
   padding: 20px;
   width: 20%;
   margin: 20px;
